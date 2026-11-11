@@ -7,73 +7,115 @@
 <title>FORKAN EARN</title>
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f1f5f9;
- color:#172033;
-}
-header{
- background:#075c42;
- color:white;
- padding:25px 18px;
- text-align:center;
-}
-header h1{margin:0;font-size:27px}
-header p{margin:8px 0 0}
-.container{max-width:650px;margin:20px auto;padding:15px}
-.card{
- background:white;
- padding:20px;
- margin-bottom:15px;
- border-radius:14px;
- box-shadow:0 3px 12px #00000012;
-}
-.points{font-size:30px;color:#087b55;font-weight:bold}
-button{
- background:#087b55;color:white;
- border:0;padding:12px 18px;
- border-radius:9px;font-size:15px;
-}
-footer{text-align:center;padding:20px;color:#64748b}
+body{margin:0;background:#f1f5f9;font-family:Arial,sans-serif;color:#172033}
+header{background:linear-gradient(135deg,#063b30,#087e59);color:white;padding:25px 18px;border-radius:0 0 25px 25px}
+.brand{font-size:25px;font-weight:bold;letter-spacing:1px}
+header p{color:#d1fae5}
+.container{max-width:650px;margin:auto;padding:16px}
+.card{background:white;padding:18px;border-radius:16px;margin:15px 0;box-shadow:0 3px 12px #0000000b}
+.points{background:linear-gradient(120deg,#087e59,#0ca678);color:white}
+.number{font-size:34px;font-weight:bold;margin:10px 0}
+h2{font-size:19px;margin-top:0}
+button{border:0;background:#087e59;color:white;padding:11px 17px;border-radius:9px;font-size:14px;cursor:pointer}
+button:disabled{background:#94a3b8}
+.task{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #eee}
+.small{font-size:12px;color:#64748b}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+nav a{background:white;padding:10px;border-radius:9px;text-decoration:none;color:#087e59;font-size:13px}
+footer{text-align:center;color:#64748b;padding:25px;font-size:13px}
+.notice{background:#fff7d6;color:#805b00;padding:12px;border-radius:10px;font-size:13px}
 </style>
 </head>
 <body>
 <header>
-<h1>FORKAN EARN</h1>
-<p>শিখুন • কাজ করুন • পয়েন্ট অর্জন করুন</p>
+<div class="brand">🌟 FORKAN EARN</div>
+<p>স্বাগতম! তোমার ডেমো ড্যাশবোর্ডে</p>
 </header>
 
 <div class="container">
-<div class="card">
-<h2>স্বাগতম!</h2>
-<p>FORKAN EARN-এর পরীক্ষামূলক ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+<div class="notice">ℹ️ এটি পরীক্ষামূলক ওয়েবসাইট। এখানে কোনো বাস্তব টাকা দেওয়া বা নেওয়া হয় না।</div>
+
+<nav>
+<a href="#home">হোম</a>
+<a href="#tasks">দৈনিক কাজ</a>
+<a href="#quiz">কুইজ</a>
+<a href="#referral">রেফারেল</a>
+</nav>
+
+<section id="home" class="card points">
+<div>⭐ তোমার মোট ডেমো পয়েন্ট</div>
+<div class="number" id="points">0</div>
+<div class="small" style="color:white">শুধুমাত্র পরীক্ষামূলক পয়েন্ট</div>
+</section>
+
+<section id="tasks" class="card">
+<h2>📋 দৈনিক কাজ</h2>
+<div class="task">
+<div>বাংলাদেশ সম্পর্কে একটি তথ্য পড়ো</div>
+<button onclick="completeTask(this,10)">শুরু</button>
+</div>
+<div class="task">
+<div>আজকের সাধারণ জ্ঞান প্রশ্ন পড়ো</div>
+<button onclick="completeTask(this,10)">শুরু</button>
+</div>
+<div class="task">
+<div>নিজের পড়াশোনার ১৫ মিনিট অনুশীলন</div>
+<button onclick="completeTask(this,15)">শুরু</button>
+</div>
+</section>
+
+<section id="quiz" class="card">
+<h2>🧠 সাধারণ জ্ঞান কুইজ</h2>
+<p>বাংলাদেশের রাজধানীর নাম কী?</p>
+<button onclick="answer(this,true)">ঢাকা</button>
+<button onclick="answer(this,false)">চট্টগ্রাম</button>
+<p id="quizResult" class="small"></p>
+</section>
+
+<section id="referral" class="card">
+<h2>👥 রেফারেল</h2>
+<p>বন্ধুদের সঙ্গে ওয়েবসাইটটি পরিচয় করিয়ে দিতে পারো।</p>
+<p class="small">রেফারেল গণনা ও পুরস্কার ব্যবস্থা এখনো চালু হয়নি।</p>
+</section>
+
+<section class="card">
+<h2>👤 প্রোফাইল</h2>
+<p>নাম: FORKAN EARN ব্যবহারকারী</p>
+<p class="small">এটি একটি নমুনা প্রোফাইল।</p>
+</section>
+
+<footer>
+FORKAN EARN © 2026<br>
+Developed by MD Forkan Ahmed
+</footer>
 </div>
 
-<div class="card">
-<h3>আমার পয়েন্ট</h3>
-<div class="points" id="points">0 Points</div>
-<p>এটি শুধু ডেমো পয়েন্ট। বাস্তব টাকা নয়।</p>
-</div>
-
-<div class="card">
-<h3>দৈনিক কাজ</h3>
-<p>শীঘ্রই এখানে বৈধ ও যাচাইযোগ্য কাজ যুক্ত হবে।</p>
-<button onclick="alert('কাজ এখনো যুক্ত করা হয়নি।')">কাজ দেখুন</button>
-</div>
-
-<div class="card">
-<h3>দৈনিক কুইজ</h3>
-<p>শীঘ্রই এখানে কুইজ যুক্ত হবে।</p>
-<button onclick="alert('কুইজ শীঘ্রই আসছে।')">কুইজ দেখুন</button>
-</div>
-
-<div class="card">
-<h3>রেফারেল</h3>
-<p>বন্ধুদের আমন্ত্রণের সুবিধা শীঘ্রই আসবে।</p>
-</div>
-</div>
-
-<footer>© 2026 FORKAN EARN</footer>
+<script>
+let points=0;
+function updatePoints(){
+document.getElementById("points").textContent=points;
+}
+function completeTask(button,value){
+if(button.disabled)return;
+points+=value;
+button.disabled=true;
+button.textContent="সম্পন্ন";
+updatePoints();
+}
+function answer(button,correct){
+const result=document.getElementById("quizResult");
+if(result.textContent!==""){
+return;
+}
+if(correct){
+points+=5;
+result.textContent="সঠিক উত্তর! ৫ ডেমো পয়েন্ট যোগ হয়েছে।";
+}else{
+result.textContent="সঠিক উত্তর: ঢাকা। আবার চেষ্টা করো পরের কুইজে!";
+}
+updatePoints();
+}
+</script>
 </body>
-</html>
+ </html>
+
