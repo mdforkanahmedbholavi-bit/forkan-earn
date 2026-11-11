@@ -3,119 +3,170 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FORKAN EARN</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f1f5f9;font-family:Arial,sans-serif;color:#172033}
-header{background:linear-gradient(135deg,#063b30,#087e59);color:white;padding:25px 18px;border-radius:0 0 25px 25px}
-.brand{font-size:25px;font-weight:bold;letter-spacing:1px}
-header p{color:#d1fae5}
-.container{max-width:650px;margin:auto;padding:16px}
-.card{background:white;padding:18px;border-radius:16px;margin:15px 0;box-shadow:0 3px 12px #0000000b}
-.points{background:linear-gradient(120deg,#087e59,#0ca678);color:white}
-.number{font-size:34px;font-weight:bold;margin:10px 0}
+body{margin:0;background:#f1f5f9;color:#172033;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#063b30,#0b9465);color:white;padding:25px 18px;border-radius:0 0 22px 22px}
+header h1{margin:0;font-size:26px}
+header p{margin-bottom:0;color:#d1fae5}
+main{max-width:650px;margin:auto;padding:15px}
+.notice{background:#fff4ce;color:#765400;padding:13px;border-radius:12px;font-size:13px;line-height:1.6}
+.wallet,.card{background:white;border-radius:15px;padding:17px;margin:14px 0;box-shadow:0 3px 12px #0000000a}
+.wallet{background:linear-gradient(120deg,#087e59,#0ca678);color:white}
+.wallet strong{font-size:30px;display:block;margin:8px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+nav a{background:white;color:#087e59;padding:10px;border-radius:9px;text-decoration:none;font-size:13px}
 h2{font-size:19px;margin-top:0}
-button{border:0;background:#087e59;color:white;padding:11px 17px;border-radius:9px;font-size:14px;cursor:pointer}
+.categories{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.category{background:#ecfdf5;border-radius:12px;padding:13px;text-align:center}
+.category b{display:block;margin-top:6px;font-size:14px}
+.task{border-top:1px solid #eee;padding:14px 0}
+.task:first-of-type{border-top:0}
+.task p{font-size:13px;color:#64748b;line-height:1.5}
+.tag{font-size:11px;color:#087e59;background:#dcfce7;padding:5px 8px;border-radius:20px}
+button{background:#087e59;color:white;border:0;padding:10px 14px;border-radius:9px;cursor:pointer}
 button:disabled{background:#94a3b8}
-.task{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #eee}
-.small{font-size:12px;color:#64748b}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
-nav a{background:white;padding:10px;border-radius:9px;text-decoration:none;color:#087e59;font-size:13px}
-footer{text-align:center;color:#64748b;padding:25px;font-size:13px}
-.notice{background:#fff7d6;color:#805b00;padding:12px;border-radius:10px;font-size:13px}
+.status{font-size:12px;color:#64748b;margin-left:7px}
+input,textarea{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:9px;margin:8px 0;font:inherit}
+footer{text-align:center;color:#64748b;padding:25px;font-size:12px}
 </style>
 </head>
 <body>
 <header>
-<div class="brand">🌟 FORKAN EARN</div>
-<p>স্বাগতম! তোমার ডেমো ড্যাশবোর্ডে</p>
+<h1>🌟 FORKAN EARN</h1>
+<p>শিখুন, কাজ করুন, দক্ষতা বাড়ান</p>
 </header>
 
-<div class="container">
-<div class="notice">ℹ️ এটি পরীক্ষামূলক ওয়েবসাইট। এখানে কোনো বাস্তব টাকা দেওয়া বা নেওয়া হয় না।</div>
+<main>
+<div class="notice">
+<strong>ডেমো সংস্করণ:</strong> এখানে দেখানো পয়েন্ট বাস্তব টাকা নয়। এখনো কোনো বাস্তব পেমেন্ট বা টাকা উত্তোলন চালু হয়নি।
+</div>
 
 <nav>
 <a href="#home">হোম</a>
-<a href="#tasks">দৈনিক কাজ</a>
-<a href="#quiz">কুইজ</a>
-<a href="#referral">রেফারেল</a>
+<a href="#categories">ক্যাটাগরি</a>
+<a href="#tasks">কাজ</a>
+<a href="#submit">জমা</a>
 </nav>
 
-<section id="home" class="card points">
-<div>⭐ তোমার মোট ডেমো পয়েন্ট</div>
-<div class="number" id="points">0</div>
-<div class="small" style="color:white">শুধুমাত্র পরীক্ষামূলক পয়েন্ট</div>
+<section id="home" class="wallet">
+ডেমো পয়েন্ট
+<strong id="points">0</strong>
+ছবির মতো নমুনা নয়, এখানে তোমার পরীক্ষামূলক পয়েন্ট দেখা যাবে।
+</section>
+
+<section id="categories" class="card">
+<h2>📂 কাজের বিভাগ</h2>
+<div class="categories">
+<div class="category">🎬<b>ভিডিও ও শেখা</b></div>
+<div class="category">🧠<b>কুইজ ও সাধারণ জ্ঞান</b></div>
+<div class="category">🏪<b>ব্যবসায়ীর ছোট কাজ</b></div>
+<div class="category">📢<b>পণ্য ও সেবা প্রচারণা</b></div>
+</div>
 </section>
 
 <section id="tasks" class="card">
-<h2>📋 দৈনিক কাজ</h2>
+<h2>📋 উপলব্ধ ডেমো কাজ</h2>
+
 <div class="task">
-<div>বাংলাদেশ সম্পর্কে একটি তথ্য পড়ো</div>
-<button onclick="completeTask(this,10)">শুরু</button>
+<span class="tag">ভিডিও ও শেখা</span>
+<h3>বাংলাদেশ সম্পর্কে শেখা</h3>
+<p>বাংলাদেশের জাতীয় পরিচয় সম্পর্কে পড়ো এবং বিষয়টি শেখো।</p>
+<button onclick="startTask(this,'বাংলাদেশ সম্পর্কে শেখা')">কাজ শুরু</button>
+<span class="status">ডেমো</span>
 </div>
+
 <div class="task">
-<div>আজকের সাধারণ জ্ঞান প্রশ্ন পড়ো</div>
-<button onclick="completeTask(this,10)">শুরু</button>
+<span class="tag">কুইজ</span>
+<h3>সাধারণ জ্ঞান</h3>
+<p>বাংলাদেশের রাজধানী কী?</p>
+<button onclick="quiz()">কুইজ শুরু</button>
+<p id="quizResult"></p>
 </div>
+
 <div class="task">
-<div>নিজের পড়াশোনার ১৫ মিনিট অনুশীলন</div>
-<button onclick="completeTask(this,15)">শুরু</button>
+<span class="tag">ব্যবসায়ীর ছোট কাজ</span>
+<h3>ওয়েবসাইট পরীক্ষা</h3>
+<p>একটি নমুনা ওয়েবসাইটের ব্যবহার সহজ কি না তা পরীক্ষা করে মতামত লেখো।</p>
+<button onclick="startTask(this,'ওয়েবসাইট পরীক্ষা')">কাজ শুরু</button>
+<span class="status">স্পনসর এখনো নেই</span>
+</div>
+
+<div class="task">
+<span class="tag">প্রচারণা</span>
+<h3>পণ্য পরিচিতি পড়া</h3>
+<p>একটি নমুনা পণ্যের তথ্য পড়ে তার বৈশিষ্ট্য সম্পর্কে শেখো।</p>
+<button onclick="startTask(this,'পণ্য পরিচিতি পড়া')">কাজ শুরু</button>
+<span class="status">স্পনসর এখনো নেই</span>
 </div>
 </section>
 
-<section id="quiz" class="card">
-<h2>🧠 সাধারণ জ্ঞান কুইজ</h2>
-<p>বাংলাদেশের রাজধানীর নাম কী?</p>
-<button onclick="answer(this,true)">ঢাকা</button>
-<button onclick="answer(this,false)">চট্টগ্রাম</button>
-<p id="quizResult" class="small"></p>
-</section>
-
-<section id="referral" class="card">
-<h2>👥 রেফারেল</h2>
-<p>বন্ধুদের সঙ্গে ওয়েবসাইটটি পরিচয় করিয়ে দিতে পারো।</p>
-<p class="small">রেফারেল গণনা ও পুরস্কার ব্যবস্থা এখনো চালু হয়নি।</p>
+<section id="submit" class="card">
+<h2>📨 কাজ জমা দাও</h2>
+<p>তোমার সম্পন্ন করা ডেমো কাজের নাম ও উত্তর লিখো।</p>
+<input id="taskName" placeholder="কাজের নাম">
+<textarea id="taskAnswer" rows="3" placeholder="তোমার উত্তর বা মতামত"></textarea>
+<button onclick="submitTask()">জমা দাও</button>
+<p id="submitResult"></p>
 </section>
 
 <section class="card">
-<h2>👤 প্রোফাইল</h2>
-<p>নাম: FORKAN EARN ব্যবহারকারী</p>
-<p class="small">এটি একটি নমুনা প্রোফাইল।</p>
+<h2>📌 আমার কাজের অবস্থা</h2>
+<div id="history">এখনো কোনো কাজ জমা দেওয়া হয়নি।</div>
+</section>
+
+<section class="card">
+<h2>💳 পেমেন্ট ব্যবস্থা</h2>
+<p>বিকাশ ও নগদ পেমেন্টের ব্যবস্থা ভবিষ্যতের জন্য পরিকল্পিত।</p>
+<p class="status">বাস্তব উত্তোলন এখনো চালু নয়।</p>
 </section>
 
 <footer>
 FORKAN EARN © 2026<br>
 Developed by MD Forkan Ahmed
 </footer>
-</div>
+</main>
 
 <script>
 let points=0;
+let selectedTask="";
+let history=[];
 function updatePoints(){
 document.getElementById("points").textContent=points;
 }
-function completeTask(button,value){
-if(button.disabled)return;
-points+=value;
-button.disabled=true;
-button.textContent="সম্পন্ন";
-updatePoints();
+function startTask(button,name){
+selectedTask=name;
+document.getElementById("taskName").value=name;
+document.getElementById("submitResult").textContent="এখন নিচে গিয়ে কাজ জমা দিতে পারো।";
+document.getElementById("submit").scrollIntoView({behavior:"smooth"});
 }
-function answer(button,correct){
-const result=document.getElementById("quizResult");
-if(result.textContent!==""){
+function quiz(){
+let answer=prompt("বাংলাদেশের রাজধানী কী?");
+let result=document.getElementById("quizResult");
+if(answer===null)return;
+if(answer.trim()==="ঢাকা"){
+result.textContent="সঠিক উত্তর! এটি ডেমো কুইজ।";
+}else{
+result.textContent="সঠিক উত্তর: ঢাকা। আবার চেষ্টা করো।";
+}
+}
+function submitTask(){
+let name=document.getElementById("taskName").value.trim();
+let answer=document.getElementById("taskAnswer").value.trim();
+if(!name||!answer){
+alert("কাজের নাম ও উত্তর দুটোই লিখো।");
 return;
 }
-if(correct){
-points+=5;
-result.textContent="সঠিক উত্তর! ৫ ডেমো পয়েন্ট যোগ হয়েছে।";
-}else{
-result.textContent="সঠিক উত্তর: ঢাকা। আবার চেষ্টা করো পরের কুইজে!";
+history.push({name:name,answer:answer});
+document.getElementById("history").innerHTML=history.map(item=>
+"<p>📄 "+item.name+" — <b>Pending (ডেমো)</b></p>"
+).join("");
+document.getElementById("submitResult").textContent="ডেমো কাজ জমা হয়েছে। এটি কোনো বাস্তব সার্ভারে পাঠানো হয়নি।";
+document.getElementById("taskAnswer").value="";
 }
 updatePoints();
-}
 </script>
 </body>
- </html>
-
+</html>
